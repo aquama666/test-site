@@ -15,13 +15,19 @@ body {
   align-items: center;
   flex-direction: row-reverse;
   width: 100%;
+  flex-wrap: wrap;
   padding: 10px;
 }
 
 a {
   text-decoration: none;
   color: rgb(16, 2, 119);
+  transition: color 0.4s;
 }
+
+
+a:hover {
+  color: rgb(172, 57, 170);}
 
 .nav__list {
   display: flex;
@@ -32,7 +38,7 @@ a {
   margin-left: 30px;
   font-size: 25px;
   font-weight: 500;
-  transition: scale 0.3s;
+  transition: scale 0.4s;
 }
 
 .nav__list__item:hover {
@@ -50,6 +56,7 @@ a {
   width: 100%;
   background-color: rgb(127, 167, 169);
   padding: 40px;
+  flex-wrap: wrap;
 }
 
 .about__me {
@@ -199,4 +206,82 @@ input[type="email"] {
       );
     color: rgb(117, 10, 179);
     scale: 1.1;
+}
+
+
+
+@media (max-width: 768px) {
+  
+  
+  .container {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .nav__list {
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+  }
+
+  .nav__list__item {
+    margin-left: 0;
+    margin-bottom: 10px;
+    font-size: 20px;
+  }
+
+  .container__main {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+  }
+
+  .pic__me {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .section__skills {
+    grid-template-columns: 1fr; 
+  }
+
+  .section__title {
+    font-size: 30px;
+  }
+
+  .section__text {
+    font-size: 18px;
+  }
+
+  .form__title {
+    font-size: 30px;
+  }
+
+  .form-group input {
+    width: 100%; 
+  }
+
+  .submit-btn {
+    width: 80%; 
+  }
+}
+
+@media (max-width: 480px) {
+ 
+  .title {
+    font-size: 30px; 
+  }
+
+  .text__about {
+    font-size: 20px; 
+  }
+
+  .section__title {
+    font-size: 25px; 
+  }
+
+  .nav__list__item {
+    font-size: 18px; 
+  }
 }
